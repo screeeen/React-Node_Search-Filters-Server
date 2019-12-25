@@ -12,6 +12,9 @@ require('dotenv').config();
 
 const auth = require('./routes/auth');
 
+var apartmentRouter = require('./routes/apartment-routes');
+
+
 mongoose
   .connect(process.env.MONGODB_URI, {
     keepAlive: true,
@@ -19,7 +22,7 @@ mongoose
     reconnectTries: Number.MAX_VALUE,
   })
   .then(() => {
-    console.log(`Connected to database`);
+    console.log(`Connected to database "${x.connections[0].name}"`);
   })
   .catch(error => {
     console.error(error);
@@ -33,6 +36,7 @@ app.use(
     origin: [process.env.PUBLIC_DOMAIN],
   }),
 );
+
 // app.use((req, res, next) => {
 //   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 //   res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,OPTIONS,DELETE');
