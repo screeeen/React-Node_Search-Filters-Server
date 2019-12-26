@@ -6,7 +6,7 @@ const apartmentSchema = new Schema({
   price:Number,
   sqm:Number,
   numberOfBedrooms:Number,
-  numberOfBadrooms:Number,
+  numberOfBathrooms:Number,
 })
 
 const Apartment = mongoose.model('Apartment',apartmentSchema);

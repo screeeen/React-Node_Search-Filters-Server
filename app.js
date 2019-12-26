@@ -11,17 +11,17 @@ const cors = require('cors');
 require('dotenv').config();
 
 const auth = require('./routes/auth');
-
 var apartmentRouter = require('./routes/apartment-routes');
 
 
 mongoose
   .connect(process.env.MONGODB_URI, {
+    useUnifiedTopology: true,
     keepAlive: true,
     useNewUrlParser: true,
     reconnectTries: Number.MAX_VALUE,
   })
-  .then(() => {
+  .then((x) => {
     console.log(`Connected to database "${x.connections[0].name}"`);
   })
   .catch(error => {
@@ -33,7 +33,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: [process.env.PUBLIC_DOMAIN],
+    origin: [process.env.PUBLIC_DOMAIN,'http://localhost:5000'],
   }),
 );
 
@@ -67,6 +67,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/auth', auth);
+app.use('/api', apartmentRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

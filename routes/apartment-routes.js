@@ -6,9 +6,9 @@ const Apartment = require('../models/apartment-model');
 
 
 
-// GET '/apartments'=> to get all the players
+// GET '/apartments'=> to get all the apartments TEST
 router.get('/apartments', (req, res, next) => {
-  Player.find().populate('apartment')
+  Apartment.find()
     .then(allTheApartments => {
       res.json(allTheApartments);
     })
