@@ -33,7 +33,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: [process.env.PUBLIC_DOMAIN,'http://localhost:5000'],
+    origin: [process.env.PUBLIC_DOMAIN,'http://localhost:3000'],
   }),
 );
 

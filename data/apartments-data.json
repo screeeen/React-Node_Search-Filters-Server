@@ -1,6 +1,7 @@
 [
   {
-    "Location": "Forbestown",
+    "name": "villa super grande en Forbestown, montones de baños!",
+    "location": "Forbestown",
     "latitude": 17.509345,
     "longitude": -94.121527,
     "price": 19298274,
@@ -9,16 +10,18 @@
     "numberOfBathrooms": 6
   },
   {
-    "Location": "Charco",
+    "name": "Oferta el charco 5 habitaciones",
+    "location": "Charco",
     "latitude": -13.87549,
     "longitude": 151.265821,
     "price": 51713371,
     "sqm": 21927563,
-    "numberOfBedrooms": 0,
+    "numberOfBedrooms": 5,
     "numberOfBathrooms": 2
   },
   {
-    "Location": "Darlington",
+    "name": "Darlington, 1 habitacion, 4 baños",
+    "location": "Darlington",
     "latitude": -52.518575,
     "longitude": 46.851997,
     "price": 58968044,
@@ -27,7 +30,8 @@
     "numberOfBathrooms": 4
   },
   {
-    "Location": "Darrtown",
+    "name": "Darrtown, pequeño garaje",
+    "location": "Darrtown",
     "latitude": 82.311389,
     "longitude": -136.429445,
     "price": 39504606,
@@ -36,25 +40,28 @@
     "numberOfBathrooms": 0
   },
   {
-    "Location": "Cade",
+    "name": "Cade, un lujo",
+    "location": "Cade",
     "latitude": -20.140314,
     "longitude": 178.509448,
     "price": 92561203,
     "sqm": 44184212,
     "numberOfBedrooms": 5,
-    "numberOfBathrooms": 0
+    "numberOfBathrooms": 1
   },
   {
-    "Location": "Fedora",
+    "name": "Fedora, muy a tope",
+    "location": "Fedora",
     "latitude": -81.14327,
     "longitude": 131.804686,
     "price": 44170959,
     "sqm": 61951640,
     "numberOfBedrooms": 6,
-    "numberOfBathrooms": 0
+    "numberOfBathrooms": 2
   },
   {
-    "Location": "Taft",
+    "name": "Grande y luminoso, a 100m del campo",
+    "location": "Taft",
     "latitude": 85.33524,
     "longitude": 150.654192,
     "price": 69883032,
@@ -63,7 +70,8 @@
     "numberOfBathrooms": 7
   },
   {
-    "Location": "Brandywine",
+    "name": "Espacioso y luminoso chalet de los 80",
+    "location": "Brandywine",
     "latitude": -15.025828,
     "longitude": 89.090301,
     "price": 67865473,
@@ -72,7 +80,8 @@
     "numberOfBathrooms": 10
   },
   {
-    "Location": "Waterview",
+    "name": "Con vistas al mar",
+    "location": "Waterview",
     "latitude": 39.644486,
     "longitude": -67.396445,
     "price": 51534574,
@@ -81,7 +90,8 @@
     "numberOfBathrooms": 4
   },
   {
-    "Location": "Boykin",
+    "name": "Gran mansión con estilo victoria",
+    "location": "Boykin",
     "latitude": 45.341698,
     "longitude": 16.331655,
     "price": 38671102,
@@ -90,7 +100,8 @@
     "numberOfBathrooms": 5
   },
   {
-    "Location": "Vowinckel",
+    "name": "Sitio random",
+    "location": "Vowinckel",
     "latitude": 79.961031,
     "longitude": 19.861477,
     "price": 1351994,
@@ -99,7 +110,8 @@
     "numberOfBathrooms": 1
   },
   {
-    "Location": "Blandburg",
+    "name": "Gran apartamentco con",
+    "location": "Blandburg",
     "latitude": -15.552625,
     "longitude": -128.878113,
     "price": 61990080,
@@ -108,7 +120,8 @@
     "numberOfBathrooms": 9
   },
   {
-    "Location": "Dexter",
+    "name": "Gran apartamentco con",
+    "location": "Dexter",
     "latitude": -56.116489,
     "longitude": -2.979545,
     "price": 20685535,
@@ -117,7 +130,8 @@
     "numberOfBathrooms": 8
   },
   {
-    "Location": "Shawmut",
+    "name": "Gran apartamentco con",
+    "location": "Shawmut",
     "latitude": 75.610254,
     "longitude": 174.73938,
     "price": 35265676,
@@ -126,7 +140,8 @@
     "numberOfBathrooms": 4
   },
   {
-    "Location": "Wikieup",
+    "name": "Gran apartamentco con",
+    "location": "Wikieup",
     "latitude": -80.640905,
     "longitude": -133.461518,
     "price": 33001476,
@@ -135,7 +150,8 @@
     "numberOfBathrooms": 0
   },
   {
-    "Location": "Centerville",
+    "name": "Gran apartamentco con",
+    "location": "Centerville",
     "latitude": 13.648249,
     "longitude": -82.612817,
     "price": 27297849,
@@ -144,7 +160,8 @@
     "numberOfBathrooms": 10
   },
   {
-    "Location": "Frank",
+    "name": "Gran apartamentco con",
+    "location": "Frank",
     "latitude": -79.1732,
     "longitude": 86.884147,
     "price": 34857820,
@@ -153,7 +170,8 @@
     "numberOfBathrooms": 3
   },
   {
-    "Location": "Greenfields",
+    "name": "Gran apartamentco con",
+    "location": "Greenfields",
     "latitude": -8.387301,
     "longitude": -117.441742,
     "price": 60474417,
