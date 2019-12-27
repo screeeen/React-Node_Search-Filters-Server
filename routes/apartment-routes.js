@@ -7,29 +7,15 @@ const Apartment = require('../models/apartment-model');
 
 
 // GET '/apartments'=> to get all the apartments TEST
-// router.get('/apartments', (req, res, next) => {
-//   Apartment.find()
-//     .then(allTheApartments => {
-//       res.json(allTheApartments);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     })
-// });
-
-/* GET '/apartments => parameters apartments*/
-router.get('/apartments', function (req, res, next) {
-  const { location } = req.params;
-  Apartment.findById(location)
-    .then((foundApartments) => {
-      res
-        .status(200)
-        .json(foundApartments)
+router.get(
+  '/apartments',
+    async(req, res, next) => {
+  Apartment.find()
+    .then(allTheApartments => {
+      res.json(allTheApartments);
     })
-    .catch((err) => {
-      res
-        .status(500)
-        .json(err)
+    .catch(err => {
+      res.json(err);
     })
 });
 
@@ -40,10 +26,8 @@ router.get(
     console.log('req.query', req.query);
     const { location, priceMax, priceMin, sizeMax, sizeMin, roomsNumber } = req.query;
 
-    // var queryString = '\"' + query.split(' ').join('\" \"') + '\"';
-
     try {
-      const apartmentsRecipe = await Apartment.find({ location: location  });
+      const apartmentsRecipe = await Apartment.find({ location: location ,$and:[{price: {$gte:priceMin}}, {price: {$lte:priceMax}}],$and:[{sqm: {$gte:sizeMin}}, {sqm: {$lte:sizeMax}}],numberOfBedrooms: {$gte:roomsNumber}});
       res.status(200).json(apartmentsRecipe);
     } catch (error) {
       next(error);
@@ -53,3 +37,4 @@ router.get(
 
 
 module.exports = router;
+
