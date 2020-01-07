@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const cors = require('cors');
-require('dotenv').config();
+// require('dotenv').config();
 
 const auth = require('./routes/auth');
 var apartmentRouter = require('./routes/apartment-routes');
