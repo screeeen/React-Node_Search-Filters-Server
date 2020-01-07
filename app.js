@@ -8,16 +8,17 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const cors = require('cors');
-// require('dotenv').config();
+require('dotenv').config();
 
 const auth = require('./routes/auth');
+
+
 var apartmentRouter = require('./routes/apartment-routes');
 
 
 mongoose
   .connect(process.env.MONGODB_URI, {
     keepAlive: true,
-    useNewUrlParser: true,
     reconnectTries: Number.MAX_VALUE,
   })
   .then((x) => {
@@ -32,7 +33,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: [process.env.PUBLIC_DOMAIN],
+    origin: [process.env.PUBLIC_DOMAIN,'https://mockupfortheflatsearch.herokuapp.com/'],
   }),
 );
 
@@ -65,8 +66,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// ROUTES MIDDLEWARE:
 app.use('/auth', auth);
 app.use('/api', apartmentRouter);
+
+//REACT APP index.html
+app.use((req,res,next)=>{
+  //If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
