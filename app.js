@@ -33,7 +33,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: [process.env.PUBLIC_DOMAIN,'https://mockupfortheflatsearch.herokuapp.com/'],
+    origin: [process.env.PUBLIC_DOMAIN,'http://localhost:3000','https://mockupfortheflatsearch.herokuapp.com/'],
   }),
 );
 
